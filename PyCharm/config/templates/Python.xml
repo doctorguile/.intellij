@@ -1,0 +1,315 @@
+<templateSet group="Python">
+  <template name="dt" value="def test_$name$(self):&#10;    $END$" description="def test_" toReformat="false" toShortenFQNames="false">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cl" value="class $classname$($parent$):&#10;    $END$&#10;" description="Class" toReformat="false" toShortenFQNames="false">
+    <variable name="classname" expression="" defaultValue="&quot;classname&quot;" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="imp" value="import $sym$ as $name$&#10;$END$" description="import  as" toReformat="false" toShortenFQNames="false">
+    <variable name="sym" expression="" defaultValue="&quot;sym&quot;" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="from" value="from $module$ import $sym$" description="from   import" toReformat="false" toShortenFQNames="false">
+    <variable name="module" expression="" defaultValue="&quot;module&quot;" alwaysStopAt="true" />
+    <variable name="sym" expression="" defaultValue="&quot;sym&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="log" value="logger = logging.getLogger(&quot;$name$&quot;)&#10;logger.setLevel(logging.$END$)&#10;" description="logging.getLogger" toReformat="false" toShortenFQNames="false">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="tf" value="import unittest&#10;$expr_01$&#10;&#10;$END$&#10;&#10;if __name__ == '__main__':&#10;    unittest.main()" description="import unittest if __name__ == '__main__':     unittest.main()" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="from ${2:test_file} import *" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="all" value="__all__ = [&#10;    $END$&#10;]" description="__all__ = []" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="try" value="try:&#10;    $expr_01$&#10;except Exception as ex:&#10;    $expr_02$&#10;else:&#10;    $END$" description="try: except Exception as ex:" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr_02" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p" value="print($END$)" description="print()" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="." value="self.$END$" description="self." toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="pars" value="parser = argparse.ArgumentParser(description='$expr_01$')&#10;$END$" description="argparse.ArgumentParser" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="wh" value="while $cond$:&#10;    $END$" description="while" toReformat="false" toShortenFQNames="false">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="d" value="def $fn$($arg$):&#10;    $END$&#10;" description="New Function" toReformat="false" toShortenFQNames="false">
+    <variable name="fn" expression="" defaultValue="&quot;fn&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for" value="for $var$ in $collection$:&#10;    $END$" description="for in" toReformat="false" toShortenFQNames="false">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="collection" expression="" defaultValue="&quot;collection&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ifmain" value="if __name__ == '__main__':&#10;    $END$" description="if __name__ == '__main__':" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="not_impl" value="raise NotImplementedError" description="raise NotImplementedError" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="init" value="def __init__(self$arg$):&#10;    $END$" description="def __init__" toReformat="false" toShortenFQNames="false">
+    <variable name="arg" expression="" defaultValue="&quot;, arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="s" value="self" description="self" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="lam" value="lambda $arg$: $END$" description="lambda" toReformat="false" toShortenFQNames="false">
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="doc" value="&quot;&quot;&quot;$END$&#10;&quot;&quot;&quot;" description="triple quoted string (double quotes)" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="pargs" value="def parse_arguments():&#10;    parser = argparse.ArgumentParser(description='$expr_01$')&#10;    $END$&#10;    return parser.parse_args()" description="argparse.ArgumentParser" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="size" value="sys.getsizeof($END$)" description="sys.getsizeof()" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="tcs" value="class Test$expr_01$($expr_02$):&#10;    $END$&#10;" description="class Test()" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="toTest" alwaysStopAt="true" />
+    <variable name="expr_02" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="with" value="with $expr_01$ as $expr_02$:&#10;    $END$" description="with as" toReformat="false" toShortenFQNames="false">
+    <variable name="expr_01" expression="" defaultValue="expr" alwaysStopAt="true" />
+    <variable name="expr_02" expression="" defaultValue=" as ${3:alias}" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="sn" value="self.$prop$ = $prop$" description="self.  =" toReformat="false" toShortenFQNames="false">
+    <variable name="prop" expression="" defaultValue="&quot;prop&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="sm" value="@staticmethod&#10;def $method$($END$):&#10;" description="@staticmethod def" toReformat="false" toShortenFQNames="false">
+    <variable name="method" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="arg" value="parser.add_argument('-$short$', '--$long$', $END$)&#10;" description="parser.add_argument(" toReformat="false" toShortenFQNames="false">
+    <variable name="short" expression="" defaultValue="&quot;short&quot;" alwaysStopAt="true" />
+    <variable name="long" expression="" defaultValue="&quot;long&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="utf8" value="# -*- coding: utf-8 -*-&#10;" description="# -*- coding: utf-8 -*-" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="plt" value="import matplotlib.pyplot as plt&#10;$END$&#10;" description="import matplotlib.pyplot as plt" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="np" value="import numpy as np&#10;$END$" description="import numpy as np" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ife" value="if $cond$:&#10;    $stmt$&#10;else:&#10;    $END$&#10;" description="if else" toReformat="false" toShortenFQNames="false">
+    <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <variable name="stmt" expression="" defaultValue="&quot;stmt&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cm" value="@classmethod&#10;def $methodname$(cls$arg$):&#10;    $END$" description="classmethod def" toReformat="false" toShortenFQNames="false">
+    <variable name="methodname" expression="" defaultValue="&quot;methodname&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;, arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cdb" value="from celery.contrib import rdb; rdb.set_trace()" description="from celery.contrib import rdb; rdb.set_trace()" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="li" value="[$expr$ for $item$ in $container$]&#10;$END$" description="[ for in ]" toReformat="false" toShortenFQNames="false">
+    <variable name="expr" expression="" defaultValue="&quot;expr&quot;" alwaysStopAt="true" />
+    <variable name="item" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <variable name="container" expression="" defaultValue="&quot;container&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if $cond$:&#10;    $END$&#10;" description="if" toReformat="false" toShortenFQNames="false">
+    <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="r" value="return $END$" description="return ..." toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ps" value="pass" description="pass" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="reg" value="$reobj$ = re.compile(r'''$patten$''')&#10;$END$" description="re.compile" toReformat="false" toShortenFQNames="false">
+    <variable name="reobj" expression="" defaultValue="&quot;reobj&quot;" alwaysStopAt="true" />
+    <variable name="patten" expression="" defaultValue="&quot;pattern&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="defm" value="def $method$(self$arg$):&#10;    $END$" description="def (self," toReformat="false" toShortenFQNames="false">
+    <variable name="method" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;, arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="#!" value="#!/usr/bin/env python&#10;# -*- coding: utf-8 -*-  &#10;&#10;def main():&#10;    pass$END$&#10;&#10;if __name__ == '__main__':&#10;    main()&#10;" description="script tag" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="contain" value="def __len__(self):&#10;&#9;pass&#10;&#10;def __getitem__(self, key):&#10;&#9;pass&#10;&#10;def __setitem__(self, key, value):&#10;&#9;pass&#10;&#10;def __delitem__(self, key):&#10;&#9;pass&#10;&#10;def __iter__(self):&#10;&#9;pass&#10;&#10;def __reversed__(self):&#10;&#9;pass&#10;&#10;def __contains__(self, item):&#10;&#9;pass&#10;$END$&#10;" description="methods for emulating a container type" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="attr" value="def __getattr__(self, name):&#10;&#9;pass&#10;&#10;def __setattr__(self, name, value):&#10;&#9;pass&#10;&#10;def __delattr__(self, name):&#10;&#9;pass&#10;$END$" description="methods for customizing attribute access" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cmp" value="def __eq__(self, other):&#10;&#9;pass&#10;&#10;def __ne__(self, other):&#10;&#9;pass&#10;&#10;def __lt__(self, other):&#10;&#9;pass&#10;&#10;def __le__(self, other):&#10;&#9;pass&#10;&#10;def __gt__(self, other):&#10;&#9;pass&#10;&#10;def __ge__(self, other):&#10;&#9;pass&#10;&#10;def __cmp__(self, other):&#10;&#9;pass&#10;$END$" description="methods implementing rich comparison" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="repr" value="def __repr__(self):&#10;&#9;pass&#10;&#10;def __str__(self):&#10;&#9;pass&#10;&#10;def __unicode__(self):&#10;&#9;pass&#10;&#10;$END$" description="methods implementing string representation" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ifee" value="if $cond1$:&#10;    $stmt1$&#10;elif $cond2$:&#10;&#9;$stmt2$    &#10;else:&#10;    $END$&#10;" description="If / Elif / Else" toReformat="false" toShortenFQNames="false">
+    <variable name="cond1" expression="" defaultValue="&quot;cond1&quot;" alwaysStopAt="true" />
+    <variable name="stmt1" expression="" defaultValue="&quot;stmt1&quot;" alwaysStopAt="true" />
+    <variable name="cond2" expression="" defaultValue="&quot;cond2&quot;" alwaysStopAt="true" />
+    <variable name="stmt2" expression="" defaultValue="&quot;stmt2&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="do" value="while True:&#10;    $stmt$&#10;    if $condition$:&#10;        break&#10;$END$&#10;" description="does the same as do...while in other languages" toReformat="false" toShortenFQNames="false">
+    <variable name="stmt" expression="" defaultValue="&quot;stmt&quot;" alwaysStopAt="true" />
+    <variable name="condition" expression="" defaultValue="&quot;condition&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="el" value="else:&#10;    $END$&#10;" description="else" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ei" value="elif $cond$:    &#10;    $END$&#10;" description="else if" toReformat="false" toShortenFQNames="false">
+    <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="walkdir" value="for root, dirs, files in os.walk($dir$):&#10;    for fn in files:&#10;        fullpath = os.path.join(root, fn)&#10;        $END$" description="for root, dirs, files in os.walk(&quot;.&quot;)" toReformat="false" toShortenFQNames="true">
+    <variable name="dir" expression="" defaultValue="&quot;'.'&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rese" value="$match$ = re.search($pattern$, $subject$$flag$)&#10;# DOTALL without this flag, '.' will match anything except a newline.&#10;# MULTILINE affects ^ $&#10;if $match$:&#10;    fullmatch = $match$.group(0)&#10;    m1 = $match$.group(1)&#10;    m1, m2 = $match$.groups()&#10;    $END$" description="re.search" toReformat="false" toShortenFQNames="false">
+    <variable name="match" expression="" defaultValue="&quot;m&quot;" alwaysStopAt="true" />
+    <variable name="pattern" expression="" defaultValue="&quot;r'[A-Za-z0-9]'&quot;" alwaysStopAt="true" />
+    <variable name="subject" expression="" defaultValue="&quot;subject&quot;" alwaysStopAt="true" />
+    <variable name="flag" expression="" defaultValue="&quot;, re.DOTALL|re.MULTILINE|re.IGNORECASE&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="resub" value="$replaced$ = re.sub($pattern$, $replace$, $subject$$count$$flags$)&#10;# DOTALL without this flag, '.' will match anything except a newline.&#10;# MULTILINE affects ^ $&#10;" description="re.sub" toReformat="false" toShortenFQNames="false">
+    <variable name="replaced" expression="" defaultValue="&quot;replaced&quot;" alwaysStopAt="true" />
+    <variable name="pattern" expression="" defaultValue="&quot;r'[A-Za-z0-9]'&quot;" alwaysStopAt="true" />
+    <variable name="replace" expression="" defaultValue="&quot;replace&quot;" alwaysStopAt="true" />
+    <variable name="subject" expression="" defaultValue="&quot;subject&quot;" alwaysStopAt="true" />
+    <variable name="count" expression="" defaultValue="&quot;, 0&quot;" alwaysStopAt="true" />
+    <variable name="flags" expression="" defaultValue="&quot;, re.DOTALL|re.MULTILINE|re.IGNORECASE&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
