@@ -4,7 +4,7 @@ function setupsymlink() {
 local configdir=${1:-PyCharm}
 local srcdir=${2:-PyCharm}
 local xmlfile=${3:-Python.xml}
-local src=$srcdir/config/templates/$xmlfile
+local src=`pwd`/$srcdir/config/templates/$xmlfile
 if [[ ! -e $src ]]; then
     echo "$src doesn't exist"
     return
