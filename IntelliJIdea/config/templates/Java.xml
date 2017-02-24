@@ -1,0 +1,144 @@
+<templateSet group="Java">
+  <template name="try" value="try {&#10;    $END$&#10;} catch($Exception$ $e$) {&#10;}" description="try catch" toReformat="false" toShortenFQNames="true">
+    <variable name="Exception" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="e" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="tryf" value="try {&#10;    $END$&#10;} catch($Exception$ $e$) {&#10;} finally {&#10;}" description="try catch finally" toReformat="false" toShortenFQNames="true">
+    <variable name="Exception" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="e" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="case" value="case $expr$:&#10;    $END$&#10;" description="case ..." toReformat="false" toShortenFQNames="true">
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="elif" value="else if ($cond$) {&#10;    $END$&#10;}&#10;" description="else if () { }" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($cond$) {&#10;    $END$&#10;}&#10;" description="if () { }" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="sw" value="switch ($cond$) {&#10;    case $expr$:&#10;        $END$&#10;        break;&#10;    default:&#10;        break;&#10;}" description="switch { case ...}" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wh" value="while ($cond$) {&#10;    $END$&#10;}" description="while() { ...}" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="re" value="return $END$" description="return ..." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="po" value="protected $END$" description="protected" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="pr" value="private $END$" description="private" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="pu" value="public $END$" description="public" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="st" value="static $END$" description="static" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="list" value="List&lt;$Object$&gt; $list$ = new ArrayList&lt;$Object$&gt;();$END$&#10;&#10;" description="new ArrayList ..." toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="list" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="map" value="Map&lt;$Object$, $Integer$&gt; $map$ = new HashMap&lt;$Object$, $Integer$&gt;();$END$&#10;" description="new HashMap ..." toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Integer" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="map" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="set" value="Set&lt;$Object$&gt; $set$ = new HashSet&lt;$Object$&gt;();$END$&#10;" description="new HashSet ..." toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="set" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="stack" value="Stack&lt;$Object$&gt; $stack$ = new Stack&lt;$Object$&gt;();$END$" description="new Stack  ..." toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="stack" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="debug" value="Logger.debug($END$);" description="Logger.debug(" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="error" value="Logger.error($END$);" description="Logger.error(" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="info" value="Logger.info($END$);" description="Logger.info(" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="warn" value="Logger.warn($END$);" description="Logger.warn(" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="v" value="$Object$ $var$ = new $Object$($val$);$END$" description="var = new ..." toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="val" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="m" value="$void$ $method$($arg$) {&#10;    $END$    &#10;}&#10;" description="void method(arg) { ... }" toReformat="false" toShortenFQNames="true">
+    <variable name="void" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="ife" value="if ($cond$) {&#10;    $stmt$&#10;} else {&#10;    $END$&#10;}&#10;" description="if () { } else {}" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="stmt" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
