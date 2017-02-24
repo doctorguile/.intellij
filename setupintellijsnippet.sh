@@ -44,6 +44,10 @@ setupsymlink PhpStorm WebStorm JavaScript.xml
 
 setupsymlink WebStorm WebStorm JavaScript.xml
 
+setupsymlink CLion WebStorm JavaScript.xml
+setupsymlink CLion PyCharm Python.xml
+
+setupsymlink IntelliJIdea IntelliJIdea Java.xml
 setupsymlink IntelliJIdea WebStorm JavaScript.xml
 setupsymlink IntelliJIdea PhpStorm PHP.xml
 setupsymlink IntelliJIdea PyCharm Python.xml
