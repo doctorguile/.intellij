@@ -44,6 +44,8 @@ setupsymlink PhpStorm WebStorm JavaScript.xml
 
 setupsymlink WebStorm WebStorm JavaScript.xml
 
+setupsymlink CLion CLion C.xml
+setupsymlink CLion CLion C_C__.xml
 setupsymlink CLion WebStorm JavaScript.xml
 setupsymlink CLion PyCharm Python.xml
 
