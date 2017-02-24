@@ -1,0 +1,171 @@
+<templateSet group="C">
+  <template name="main" value="int main(int argc, const char *argv[])&#10;{&#10;    $END$&#10;    return 0;&#10;}" description="int main(int argc, const char *argv[])" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="inc" value="#include &lt;$END$.h&gt;" description="C include &lt;&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="Inc" value="#include &quot;$END$.h&quot;" description="C include &quot;&quot;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="ndef" value="#ifndef $SYM$&#10;#define $SYM$ $VAL$&#10;$SELECTION$&#10;#endif /* ifndef $SYM$ */" description="#ifndef #define #endif" toReformat="true" toShortenFQNames="true">
+    <variable name="SYM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="def" value="#define $END$&#10;" description="#define" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="ifdef" value="#ifdef $SYM$&#10;$SELECTION$&#10;#endif /* ifdef $SYM$ */" description="#ifdef  #endif" toReformat="true" toShortenFQNames="true">
+    <variable name="SYM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="#if" value="#if $COND$&#10;$SELECTION$&#10;#endif /* #if $COND$ */" description="#if  #endif" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="once" value="#ifndef $SYM$&#10;#define $SYM$&#10;$SELECTION$&#10;#endif /* ifndef $SYM$ */" description="#ifndef #define #endif" toReformat="true" toShortenFQNames="true">
+    <variable name="SYM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($cond$) {&#10;    $SELECTION$&#10;}" description="if (...) { }" toReformat="true" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="ife" value="if ($cond$) {&#10;    $SELECTION$&#10;} else {    &#10;}" description="if (...) else { }" toReformat="true" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="el" value="else {    &#10;    $SELECTION$&#10;}" description="else { }" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="elif" value="else if ($cond$) {&#10;    $SELECTION$&#10;}" description="else if (...) { }" toReformat="true" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="sw" value="switch ($variable$}) {&#10;case $expr$:&#10;    $END$&#10;    break;&#10;default:&#10;}" description="switch() ..." toReformat="true" toShortenFQNames="true">
+    <variable name="variable" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="case" value="case $expr$:&#10;    $END$&#10;    break;&#10;" description="case '': break" toReformat="true" toShortenFQNames="true">
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="re" value="return $END$;" description="return" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="wh" value="while ($cond$) {&#10;    $END$;&#10;    }" description="while () ..." toReformat="true" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="do" value="do {&#10;    $END$;&#10;} while ($cond$);" description="do while ()" toReformat="true" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="fun" value="$void$ $function_name$($arg$) {&#10;    $END$&#10;}" description="function () {}" toReformat="true" toShortenFQNames="true">
+    <variable name="void" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="fund" value="$void$ $function_name$($arg$);" description="function declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="void" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="st" value="struct $name$ {&#10;    $data$&#10;}$END$;" description="struct ..." toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="data" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="enum" value="enum $name$ {&#10;    $END$&#10;};" description="enum ..." toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="pr" value="printf(&quot;$END$\n&quot;);" description="printf ..." toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="fpr" value="fprintf($stderr$, &quot;$END$\n&quot;);" description="fprintf ..." toReformat="true" toShortenFQNames="true">
+    <variable name="stderr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="prd" value="printf(&quot;$var$ = %d$END$\n&quot;, $var$);" description="printf integer ..." toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="prf" value="printf(&quot;$var$ = %f$END$\n&quot;, $var$);" description="printf float ..." toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="prx" value="printf(&quot;$var$ = %$x$ $END$\n&quot;, $var$);" description="printf %x ..." toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="x" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="ifn" value="if (NULL == $var$) {&#10;    $SELECTION$&#10;}" description="if (NULL == ...) { }" toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+  <template name="ifnn" value="if (NULL != $var$) {&#10;    $SELECTION$&#10;}" description="if (NULL != ...) { }" toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_C" value="true" />
+    </context>
+  </template>
+</templateSet>

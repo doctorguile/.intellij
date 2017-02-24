@@ -1,0 +1,235 @@
+<templateSet group="C/C++">
+  <template name="beginend" value="$CONTAINER$.begin(), $COPY_CONTAINER$.end()$END$" description="container.begin(), container.end()" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTAINER" expression="variableForRangeBasedIteration()" defaultValue="&quot;container&quot;" alwaysStopAt="true" />
+    <variable name="COPY_CONTAINER" expression="CONTAINER" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="cl" value="class $clsname$ {&#10;public:&#10;        $clsname$($arguments$);&#10;        virtual ~$clsname$();&#10;private:&#10;        $END$&#10;};" description="class" toReformat="true" toShortenFQNames="true">
+    <variable name="clsname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arguments" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="ns" value="namespace $ns$ {&#10;    $END$&#10;} /* $ns$ */" description="namespace" toReformat="true" toShortenFQNames="true">
+    <variable name="ns" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="readfile" value="std::vector&lt;char&gt; v;&#10;if (FILE *fp = fopen($filename$, &quot;r&quot;)) {&#10;    char buf[1024];&#10;    while(size_t len = fread(buf, 1, sizeof(buf), fp))&#10;        v.insert(v.end(), buf, buf + len);&#10;    fclose(fp);&#10;}" description="FILE *fp = fopen(&quot;filename&quot;, &quot;r&quot;))" toReformat="true" toShortenFQNames="true">
+    <variable name="filename" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="map" value="std::map&lt;$string$, $int$&gt; $mymap$;" description="std::map&lt;k,v&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="int" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="mymap" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="vector" value="std::vector&lt;$char$&gt; $v$;" description="std::vector&lt;char&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="char" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="v" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="tp" value="template &lt;typename $InputIter$&gt;$END$" description="template &lt;typename ..." toReformat="true" toShortenFQNames="true">
+    <variable name="InputIter" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="incc" value="#include &lt;$iostream$&gt;" description="#include &lt;&gt; cpp header" toReformat="true" toShortenFQNames="true">
+    <variable name="iostream" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="binc" value="#include &lt;boost/$shared_ptr$.hpp&gt;" description="#include &lt;boost/&gt; cpp header" toReformat="true" toShortenFQNames="true">
+    <variable name="shared_ptr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="array" value="std::array&lt;$char$, $size$&gt; $var$;" description="std::array&lt;Type, size&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="char" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="deque" value="std::deque&lt;$string$&gt; $var$;" description="std::deque&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="flist" value="std::forward_list&lt;$string$&gt; $var$;" description="std::forward_list&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="list" value="std::list&lt;$string$&gt; $var$;" description="std::list&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="set" value="std::set&lt;$string$&gt; $var$;" description="std::set&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="mset" value="std::multiset&lt;$string$&gt; $var$;" description="std::multiset&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="mmap" value="std::multimap&lt;$string$, $int$&gt; $mymap$;" description="std::multimap&lt;k,v&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="int" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="mymap" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="umap" value="std::unordered_map&lt;$string$, $int$&gt; $mymap$;" description="std::unordered_map&lt;k,v&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="int" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="mymap" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="uset" value="std::unordered_set&lt;$string$&gt; $var$;" description="std::unordered_set&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="ummap" value="std::unordered_multimap&lt;$string$, $int$&gt; $mymap$;" description="std::unordered_multimap&lt;k,v&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="int" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="mymap" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="stack" value="std::stack&lt;$string$&gt; $var$;" description="std::stack&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="queue" value="std::queue&lt;$string$&gt; $var$;" description="std::queue&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="pqueue" value="std::priority_queue&lt;$string$&gt; $var$;" description="std::priority_queue&lt;Type&gt; ..." toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="pri" value="private $END$" description="private" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="pro" value="protected $END$" description="protected" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="pub" value="public $END$" description="public" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="fr" value="friend $END$" description="friend" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="mu" value="mutable $END$" description="mutable" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="cout" value="std::cout &lt;&lt; $END$ &lt;&lt; std::endl;" description="std::cout &lt;&lt; ... &lt;&lt; std::endl;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="cin" value="std::in &gt;&gt; $END$;" description="std::in &gt;&gt; ... ;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="m" value="$void$ $cls$::$funcname$($arg$) {&#10;    $END$&#10;}" description="member method" toReformat="true" toShortenFQNames="true">
+    <variable name="void" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cls" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="funcname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="sca" value="static_cast&lt;$unsigned$&gt;($expr$)$END$" description="static_cast" toReformat="true" toShortenFQNames="true">
+    <variable name="unsigned" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="dca" value="dynamic_cast&lt;$unsigned$&gt;($expr$)$END$" description="dynamic_cast" toReformat="true" toShortenFQNames="true">
+    <variable name="unsigned" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="rca" value="reinterpret_cast&lt;$unsigned$&gt;($expr$)$END$" description="reinterpret_cast" toReformat="true" toShortenFQNames="true">
+    <variable name="unsigned" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="cca" value="const_cast&lt;$unsigned$&gt;($expr$)$END$" description="const_cast" toReformat="true" toShortenFQNames="true">
+    <variable name="unsigned" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="lam" value="[$capture$]($arg$){$END$};" description="lambda" toReformat="true" toShortenFQNames="true">
+    <variable name="capture" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+</templateSet>

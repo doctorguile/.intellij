@@ -19,13 +19,13 @@
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="elif" value="else if ($cond$) {&#10;    $END$&#10;}&#10;" description="else if () { }" toReformat="false" toShortenFQNames="true">
+  <template name="elif" value="else if ($cond$) {&#10;    $SELECTION$&#10;}&#10;" description="else if () { }" toReformat="false" toShortenFQNames="true">
     <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="if" value="if ($cond$) {&#10;    $END$&#10;}&#10;" description="if () { }" toReformat="false" toShortenFQNames="true">
+  <template name="if" value="if ($cond$) {&#10;    $SELECTION$&#10;}&#10;" description="if () { }" toReformat="false" toShortenFQNames="true">
     <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
@@ -49,17 +49,17 @@
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="po" value="protected $END$" description="protected" toReformat="false" toShortenFQNames="true">
+  <template name="pro" value="protected $END$" description="protected" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="pr" value="private $END$" description="private" toReformat="false" toShortenFQNames="true">
+  <template name="pri" value="private $END$" description="private" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="pu" value="public $END$" description="public" toReformat="false" toShortenFQNames="true">
+  <template name="pub" value="public $END$" description="public" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
@@ -137,6 +137,23 @@
   <template name="ife" value="if ($cond$) {&#10;    $stmt$&#10;} else {&#10;    $END$&#10;}&#10;" description="if () { } else {}" toReformat="false" toShortenFQNames="true">
     <variable name="cond" expression="" defaultValue="&quot;cond&quot;" alwaysStopAt="true" />
     <variable name="stmt" expression="" defaultValue="&quot;stmt&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="el" value="else {&#10;    $SELECTION$&#10;}&#10;" description="else { }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ifn" value="if ($var$ == null) {&#10;    $SELECTION$&#10;}&#10;" description="if (var == null) { }" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ifnn" value="if ($var$ != null) {&#10;    $SELECTION$&#10;}&#10;" description="if (var != null) { }" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
