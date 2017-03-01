@@ -42,10 +42,11 @@
       <option name="OC_STATEMENT_CPP" value="true" />
     </context>
   </template>
-  <template name="tp" value="template &lt;typename $InputIter$&gt;$END$" description="template &lt;typename ..." toReformat="true" toShortenFQNames="true">
-    <variable name="InputIter" expression="" defaultValue="&quot;InputIter&quot;" alwaysStopAt="true" />
+  <template name="tp" value="template &lt;typename $T$&gt;$END$" description="template &lt;typename ..." toReformat="true" toShortenFQNames="true">
+    <variable name="T" expression="" defaultValue="&quot;T&quot;" alwaysStopAt="true" />
     <context>
       <option name="OC_STATEMENT_CPP" value="true" />
+      <option name="OC_DECLARATION_CPP" value="true" />
     </context>
   </template>
   <template name="incc" value="#include &lt;$iostream$&gt;" description="#include &lt;&gt; cpp header" toReformat="true" toShortenFQNames="true">
@@ -192,11 +193,12 @@
       <option name="OC_STATEMENT_CPP" value="true" />
     </context>
   </template>
-  <template name="m" value="$void$ $cls$::$funcname$($arg$) {&#10;    $END$&#10;}" description="member method" toReformat="true" toShortenFQNames="true">
+  <template name="m" value="$void$ $cls$::$funcname$ $const$($arg$) {&#10;    $END$&#10;}" description="member method" toReformat="false" toShortenFQNames="true">
     <variable name="void" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
-    <variable name="cls" expression="" defaultValue="&quot;cls&quot;" alwaysStopAt="true" />
+    <variable name="cls" expression="classNameComplete()" defaultValue="&quot;cls&quot;" alwaysStopAt="true" />
     <variable name="funcname" expression="" defaultValue="&quot;funcname&quot;" alwaysStopAt="true" />
-    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="const" expression="" defaultValue="&quot;const&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
     <context>
       <option name="OC_STATEMENT_CPP" value="true" />
       <option name="OC_DECLARATION_CPP" value="true" />
@@ -233,6 +235,19 @@
   <template name="lam" value="[$capture$]($arg$){$END$};" description="lambda" toReformat="true" toShortenFQNames="true">
     <variable name="capture" expression="" defaultValue="&quot;capture&quot;" alwaysStopAt="true" />
     <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
+  <template name="uns" value="using namespace std;$END$" description="using namespace std;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+      <option name="OC_DECLARATION_CPP" value="true" />
+    </context>
+  </template>
+  <template name="fore" value="for (auto $i$ : $container$) {                                                                                                                                          &#10;    $END$                                                                                                                                                                           &#10;}" description="for (auto i : container) { ... }" toReformat="true" toShortenFQNames="true">
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="container" expression="" defaultValue="&quot;container&quot;" alwaysStopAt="true" />
     <context>
       <option name="OC_STATEMENT_CPP" value="true" />
     </context>
