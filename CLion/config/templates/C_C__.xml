@@ -252,4 +252,11 @@
       <option name="OC_STATEMENT_CPP" value="true" />
     </context>
   </template>
+  <template name="itera" value="for (auto $i$ = $container$.begin(); $i$ != $container$.end(); ++$i$) {&#10;    $END$&#10;}" description="auto iterator auto begin() ... end()" toReformat="true" toShortenFQNames="true">
+    <variable name="i" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="container" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT_CPP" value="true" />
+    </context>
+  </template>
 </templateSet>
